@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+
 
 function App() {
+
+  const [userChoice, setUserChoice] = useState(null);
+  const [opponnentChoice, setOpponentChoice] = useState(null);
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1 className = 'headline'>Let's play rock paper scissors.</h1>
+      <h2 className = 'subheadline'>Choose wisely.</h2>
+      <div className = 'select'>
+        <i class="far fa-hand-rock"></i>
+        <i class="far fa-hand-paper"></i>
+        <i class="far fa-hand-scissors"></i>
+      </div>
     </div>
   );
 }
