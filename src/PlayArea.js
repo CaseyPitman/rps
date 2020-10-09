@@ -12,7 +12,6 @@ const PlayArea = () => {
    const [stage, setStage] = useState('choose'); //choose, countdown, result
 
 
-
    // Components will render based on game state
 
    return (

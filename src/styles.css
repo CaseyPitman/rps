@@ -1,10 +1,18 @@
+/* Styles for Rock, Paper, Scissors App */
 
+/* Mobile First */
+/* Global */
 *{
    box-sizing: border-box;
    margin: 0;
    padding:0;
 }
 
+html {
+   color: rgb(255, 255, 255, 0.8);
+   font-family: 'Schoolbell', cursive;
+   font-size: 10px;
+}
 
 body {
    background-image: url('img/chalkboard.jpg');
@@ -12,4 +20,149 @@ body {
    background-repeat:no-repeat;
    background-size: cover;
    height: 100vh;
+}
+
+#root {
+   height:100%;
+   /* background-color: gray; */
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+}
+
+/* App */
+.App {
+   /* background-color: red; */
+   height:75%;
+   width:100%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: row wrap;
+}
+
+/* Heading component */
+.heading{
+   /* background-color:lightseagreen; */
+   text-align: center;
+   width:100%;
+}
+
+.headline {
+   font-size: 4rem;
+}
+
+/* Main UI component */
+.play-area {
+   /* /* background-color:lightsalmon;  */
+   /* border: 1px solid white; */
+   height:70%;
+   width:100%;
+}
+
+/* Selection component */
+.selection-area {
+   justify-content: center;
+   align-items: center;
+   align-content: space-around;
+   flex-flow: row wrap;
+
+   height: 100%;
+}
+
+.subHeadline {
+
+   font-size: 3.6rem;
+   text-align: center;
+   width:100%;
+
+}
+
+.choices {
+   display: flex;
+   justify-content: space-around;
+
+   width: 90%;
+}
+
+/* Font Awesome Rock, Paper, & Scissor Icons */
+.fas {
+   font-size:8rem;
+}
+
+/* Countdown component */
+
+.countdown {
+   height:100%;
+
+   justify-content: center;
+   align-items: center;
+}
+
+.countdown-text{
+   font-size:10rem;
+   text-align:center;
+   width:100%;
+}
+
+
+/* Result Componenet */
+.result {
+   height:100%;
+   
+   flex-flow: row wrap;
+   justify-content: center;
+}
+
+.win-status {
+   font-size: 3.6rem;
+   text-align: center;
+   width: 100%;
+}
+
+.result-icons-div {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 90%;
+}
+.winner {
+   color:rgb(26, 188, 156)
+}
+
+.loser {
+   color:rgb(231, 76, 60);
+}
+
+.tie {
+   color: rgb(52, 152, 219);
+}
+
+.win-explain {
+   font-size: 2.4rem;
+   text-align: center;
+}
+
+.play-again {
+   font-size: 3.4rem;
+   text-align: center;
+}
+
+
+
+/* Copyright Component */
+.copyright{
+   /* background-color:seagreen; */
+   position: absolute;
+   bottom: 20px;
+
+   text-align: center;
+   width: 100%;
+}
+
+.copyright-text{
+   font-size: 2.4rem;
 }
