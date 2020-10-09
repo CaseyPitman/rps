@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 // Components
 import Selection from './Selection';
@@ -8,26 +8,27 @@ import Result from './Result';
 
 const PlayArea = () => {
 
+   //State hooks
+   const [stage, setStage] = useState('choose'); //choose, countdown, result
 
 
 
-
-
-// Components will render based on game state
+   // Components will render based on game state
 
    return (
 
       <div className = 'play-area'>
 
-         <Selection/>
+         <Selection 
+            stage = {stage} />
 
-         <Countdown />
+         <Countdown
+            stage = {stage} />
 
-         <Result />
+         <Result 
+            stage = {stage} />
 
       </div>
-
-
 
    )
 }

@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 
+//Styles
+import styles from './styles.css'
 
 // Components 
-import Headings from './Headings';
+import Heading from './Heading';
 import PlayArea from './PlayArea';
-
+import Copyright from './Copyright';
 
 
 function App() {
@@ -20,22 +22,11 @@ function App() {
   return (
     <div className='App'>
 
-      <Headings />
+      <Heading />
 
       <PlayArea />
 
-
-
-      <div className = 'result'> 
-        <i class="far fa-hand-rock"></i>
-        <i class="far fa-hand-scissors"></i>
-        <h1 className = 'win-status'>You win!</h1>
-        <h2 className = 'win-explain'>You chose rock. Your opponent chose scissors. Rock smashes scissors.</h2>
-        <h3>Play Again.</h3>
-      </div>
-      <div class = 'copyright'>
-        <h3 className = 'copyright-text'>&copy; 2020 | Casey Pitman</h3>
-      </div>
+      <Copyright />
       
     </div>
   );
