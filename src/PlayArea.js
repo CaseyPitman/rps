@@ -28,7 +28,6 @@ const PlayArea = () => {
             stage = {stage} />
 
       </div>
-
    )
 }
 

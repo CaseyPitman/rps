@@ -144,6 +144,7 @@ body {
 .win-explain {
    font-size: 2.4rem;
    text-align: center;
+   width: 100%;
 }
 
 .play-again {
@@ -165,4 +166,26 @@ body {
 
 .copyright-text{
    font-size: 2.4rem;
+}
+
+
+/* MOBILE LANDSCAPE */
+
+
+
+/* TABLET */
+
+@media only screen and (min-width: 768px){
+
+   .App {
+      width: 75%;
+   }
+}
+
+
+
+/* DESKTOP */
+
+@media only screen and (min-width: 1024px ) {
+   
 }
