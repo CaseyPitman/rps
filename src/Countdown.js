@@ -1,3 +1,5 @@
+// This module renders and updates a countdown for the gameplay - Three, two, one, shoot!
+
 import React from 'react';
 
 const Countdown = (props) => {

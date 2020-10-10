@@ -1,3 +1,5 @@
+// This module renders the main gameplay area
+
 import React, {useState} from 'react';
 
 // Components
@@ -9,11 +11,14 @@ import Result from './Result';
 const PlayArea = () => {
 
    //State hooks
-   const [stage, setStage] = useState('result'); //choose, countdown, result
+   const [stage, setStage] = useState('choose'); //choose, countdown, result
+   const [userChoice, setUserChoice] = useState('');
+   const [opponentChoice, setOpponentChoice ]= useState('');
+
+
 
 
    // Components will render based on game state
-
    return (
 
       <div className = 'play-area'>

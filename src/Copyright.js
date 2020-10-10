@@ -1,3 +1,6 @@
+// This module renders the copyright information.
+
+
 import React from 'react';
 
 const Copyright = () => {

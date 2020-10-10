@@ -1,0 +1,1 @@
+//This array contains all possible game results

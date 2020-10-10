@@ -36,6 +36,7 @@ body {
 .App {
    /* background-color: red; */
    height:75%;
+   max-width: 1024px;
    width:100%;
 
    display: flex;
@@ -91,6 +92,11 @@ body {
 /* Font Awesome Rock, Paper, & Scissor Icons */
 .fas {
    font-size:8rem;
+}
+
+.fas:hover {
+   cursor: pointer;
+   color: rgb(41, 128, 185);
 }
 
 /* Countdown component */
@@ -152,6 +158,11 @@ body {
    text-align: center;
 }
 
+.play-again:hover {
+   color: rgb(241, 196, 15);
+   cursor: pointer;
+}
+
 
 
 /* Copyright Component */
@@ -194,7 +205,11 @@ body {
 
 @media only screen and (min-width: 1024px ) {
 
-   html{
+   html  {
       font-size: 12px;
+   }
+
+   .result-icons-div {
+      width: 60%;
    }
 }
