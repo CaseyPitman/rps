@@ -5,9 +5,6 @@ import React from 'react';
 const Result = (props) => {
 
 
-   // Display this to show the result of the game.
-   let style = (props.stage === 'result') ? {display : 'flex'} : {display: 'none'};
-
    // Player clicks to play again
    let clickHandler = (event) => {
       console.log(event.target.id);
@@ -15,7 +12,7 @@ const Result = (props) => {
    
    return (
 
-      <div className = 'result' style = {style}> 
+      <div className = 'result'> 
          <h1 className = 'win-status'>You win!</h1>
          {/* winner will be blue, loser red, class set dynamically    */}
          <div className = 'result-icons-div'>

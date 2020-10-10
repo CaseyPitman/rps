@@ -66,6 +66,7 @@ body {
 
 /* Selection component */
 .selection-area {
+   display: flex;
    justify-content: center;
    align-items: center;
    align-content: space-around;
@@ -103,9 +104,10 @@ body {
 
 .countdown {
    height:100%;
-
+   display: flex;
    justify-content: center;
    align-items: center;
+   align-content: center;
 }
 
 .countdown-text{
@@ -118,9 +120,10 @@ body {
 /* Result Componenet */
 .result {
    height:100%;
-   
-   flex-flow: row wrap;
+   display:flex;
    justify-content: center;
+   align-items: center;
+   flex-flow: row wrap;
 }
 
 .win-status {

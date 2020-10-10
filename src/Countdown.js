@@ -3,15 +3,17 @@
 import React, {useState, useEffect} from 'react';
 
 const Countdown = (props) => {
- 
+   
 
-   // Display this comoponent while countdown runs.
-   let style = (props.stage === 'countdown') ? {display : 'flex'} : {display: 'none'};
+   const [countdownText, setCountdownText] = useState(null)
+
+   const countdownElements = ['Three', 'Two', 'One', 'Shoot!'];
+
 
 
    return (
-      <div className = "countdown" style = {style}>
-         <h1 className = "countdown-text">counter</h1>
+      <div className = "countdown" >
+         <h1 className = "countdown-text">three</h1>
       </div>
    )
 }

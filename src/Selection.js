@@ -6,9 +6,6 @@ import React from 'react';
 const Selection = (props) => {
 
 
-   // Display this comoponent on game start.
-   let style = (props.stage === 'choose') ? {display : 'flex'} : {display: 'none'};
-
    //User clicks their choice. 
    let clickHandler = (event) => {
       let choice = event.target.id;
@@ -17,7 +14,7 @@ const Selection = (props) => {
 
 
    return (
-      <div className = 'selection-area' style = {style}>
+      <div className = 'selection-area'>
          <h2 className = 'subHeadline'>Choose wisely.</h2>
          <div className = 'choices'>
             <i className ='fas fa-hand-rock' id = 'rock' onClick = {clickHandler}></i>
