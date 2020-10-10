@@ -16,16 +16,17 @@ const PlayArea = () => {
    //State hooks
    const [stage, setStage] = useState('choose'); //choose, countdown, result
    const [userChoice, setUserChoice] = useState('');
-   const [opponentChoice, setOpponentChoice ]= useState('');
+   const [opponentChoice, setOpponentChoice ] = useState('');
 
-
+ 
    //Function to record user choice, find opponent choice, and advance to countdown stage
-
+   
    let userSelects = (choice) => {
       setOpponentChoice(opponentChooses())
       setUserChoice(choice);
       setStage('countdown');
    }
+   
 
 
    // Components will render based on game state
@@ -34,8 +35,8 @@ const PlayArea = () => {
       <div className = 'play-area'>
 
          <Selection 
-            stage = {stage}
-            select = {userSelects} />
+         stage = {stage}
+         select = {userSelects}/>
 
          <Countdown
             stage = {stage} />
