@@ -11,6 +11,25 @@ const Countdown = (props) => {
 
 
 
+
+   useEffect(()=>{
+      let i = 3;
+      setInterval (() => {
+         if(i>0){
+         console.log(i);
+         i--;
+         } else {
+            clearInterval();
+            console.log('shoot!')
+            //then call to playArea to advance to results.
+         }
+      }, 1000)
+
+     
+
+   })
+
+
    return (
       <div className = "countdown" >
          <h1 className = "countdown-text">three</h1>

@@ -14,7 +14,7 @@ import opponentChooses from './opponentChooses'
 const PlayArea = () => {
 
    //State hooks
-   const [stage, setStage] = useState('result'); //choose, countdown, result
+   const [stage, setStage] = useState('choose'); //choose, countdown, result
    const [userChoice, setUserChoice] = useState('');
    const [opponentChoice, setOpponentChoice ] = useState('');
  
