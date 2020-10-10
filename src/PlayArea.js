@@ -9,7 +9,7 @@ import Result from './Result';
 const PlayArea = () => {
 
    //State hooks
-   const [stage, setStage] = useState('choose'); //choose, countdown, result
+   const [stage, setStage] = useState('result'); //choose, countdown, result
 
 
    // Components will render based on game state
