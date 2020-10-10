@@ -11,7 +11,8 @@ const Selection = (props) => {
 
    //User clicks their choice. 
    let clickHandler = (event) => {
-      console.log(event.target.id);
+      let choice = event.target.id;
+      props.select(choice);
    }
 
 
