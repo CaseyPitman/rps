@@ -10,20 +10,24 @@ const Result = (props) => {
       props.reset();
    }
 
-
+   //update based on context (or You Lose. or It's a tie)
+   let winStatusText = 'You Win!'
+   let winStatusTextClassName = 'loser' //or winner or Tie
 
 
    let userIconClassName = `fas fa-hand-${props.userChoice}`;
    let userTextClassName = '';
    let opponentIconClassName = `fas fa-hand-${props.opponentChoice}`;
    let opponentTextClassName = '';
-   //if user wins add class name 'winner' to it's classname
+   //if user wins add class name 'winner' to its classname
+
+   let winRationale ='';
 
    
    return (
 
       <div className = 'result'> 
-         <h1 className = 'win-status'>You win!</h1>
+         <h1 className = 'win-status'><span className = {winStatusTextClassName}>{winStatusText}</span></h1>
          {/* winner will be blue, loser red, class set dynamically    */}
          <div className = 'result-icons-div'>
             <i className = {userIconClassName}></i>
