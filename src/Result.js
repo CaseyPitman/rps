@@ -6,8 +6,8 @@ const Result = (props) => {
 
 
    // Player clicks to play again
-   let clickHandler = (event) => {
-      console.log(event.target.id);
+   let clickHandler = () => {
+      props.reset();
    }
    
    return (

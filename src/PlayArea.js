@@ -26,12 +26,18 @@ const PlayArea = () => {
       setStage('result');
    }
 
+   let reset = () => {
+      setStage('choose');
+      setUserChoice('');
+      setOpponentChoice('');
+   }
+
 
    let show;
    if (stage === 'choose'){
       show =   <Selection stage = {stage} select = {userSelects}/>
    } else if (stage === 'result'){
-      show =   <Result stage = {stage} />
+      show =   <Result stage = {stage} reset = {reset} />
    }
    
 
