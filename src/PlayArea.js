@@ -4,7 +4,6 @@ import React, {useState, useEffect} from 'react';
 
 // Components
 import Selection from './Selection';
-import Countdown from './Countdown';
 import Result from './Result';
 
 //Functions
@@ -24,21 +23,15 @@ const PlayArea = () => {
    let userSelects = (choice) => {
       setOpponentChoice(opponentChooses())
       setUserChoice(choice);
-      setStage('countdown');
+      setStage('result');
    }
 
 
    let show;
    if (stage === 'choose'){
-      show =   <Selection 
-                  stage = {stage}
-                  select = {userSelects}/>
-   } else if (stage === 'countdown'){
-      show =   <Countdown
-                  stage = {stage} />
+      show =   <Selection stage = {stage} select = {userSelects}/>
    } else if (stage === 'result'){
-      show =   <Result 
-                  stage = {stage} />
+      show =   <Result stage = {stage} />
    }
    
 
@@ -48,17 +41,7 @@ const PlayArea = () => {
 
       <div className = 'play-area'>
 
-         {/* <Selection 
-         stage = {stage}
-         select = {userSelects}/>
-
-         <Countdown
-            stage = {stage} />
-
-         <Result 
-            stage = {stage} /> */}
-
-            {show}
+         {show}
 
       </div>
    )
