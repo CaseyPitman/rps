@@ -5,7 +5,7 @@ const findWinner = (user, opp) =>{
    let winner = 'result';
 
    if (user === opp){
-      //it's a tie
+      //It's a tie
       winner = 'tie';
    } else if (user === 'rock'){
       //User chooses rock, wins v. scissors, loses v. paper

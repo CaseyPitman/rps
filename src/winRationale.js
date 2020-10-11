@@ -3,8 +3,6 @@
 const winRationale = (choicesArr) => {
    let winRationaleText = '';
 
-   console.log(choicesArr);
-
    if (choicesArr[0] === choicesArr[1]){
       //its a tie
       winRationaleText = '';
@@ -21,7 +19,6 @@ const winRationale = (choicesArr) => {
       }
    }
    
-
    return winRationaleText;
 }
 

@@ -8,8 +8,6 @@ import Result from './Result';
 
 //Functions
 import opponentChooses from './opponentChooses';
-import findWinner from './findWinner';
-
 
 
 const PlayArea = () => {
@@ -21,7 +19,6 @@ const PlayArea = () => {
 
  
    //Function to record user choice, find opponent choice, and advance to countdown stage
-   
    let userSelects = (choice) => {
       setOpponentChoice(opponentChooses())
       setUserChoice(choice);
@@ -29,14 +26,11 @@ const PlayArea = () => {
 
    }
 
-
-
    let reset = () => {
       setStage('choose');
       setUserChoice('');
       setOpponentChoice('');
    }
-
 
    let show;
    if (stage === 'choose'){
@@ -45,8 +39,6 @@ const PlayArea = () => {
       show =   <Result stage = {stage} reset = {reset} userChoice = {userChoice} opponentChoice = {opponentChoice}/>
    }
    
-
-
    // Components will render based on game state
    return (
 

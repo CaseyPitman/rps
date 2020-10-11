@@ -13,20 +13,18 @@ const Result = (props) => {
    useEffect(()=>{
       //Determine Winner
       setWinner(findWinner(props.userChoice, props.opponentChoice));
+      //Determine rationale for win.
       setWinRationaleText(winRationale([props.userChoice, props.opponentChoice]));
    })
-  
 
    // Player clicks to play again
    let clickHandler = () => {
       props.reset();
    }
 
-
-
-   //update based on context (or You Lose. or It's a tie)
+   //Update based on context
    let winStatusText = 'You Win!'
-   let winStatusTextClassName = 'loser' //or winner or Tie
+   let winStatusTextClassName = 'loser' //or winner or tie
 
 
    let userIconClassName = `fas fa-hand-${props.userChoice}`;
@@ -43,7 +41,9 @@ const Result = (props) => {
       opponentIconClassName += ' tie';
       userTextClassName += ' tie';
       opponentTextClassName += ' tie'
-   } else if (winner === 'user'){
+   } 
+   
+   else if (winner === 'user'){
       // USER WINS
       winStatusText = 'You win!';
       winStatusTextClassName = ' winner'
@@ -51,7 +51,9 @@ const Result = (props) => {
       opponentIconClassName += ' loser';
       userTextClassName += ' winner';
       opponentTextClassName += ' loser'
-   }else if (winner === 'opponent'){
+   }
+   
+   else if (winner === 'opponent'){
       // USER LOSES
       winStatusText = 'You lose.';
       winStatusTextClassName = ' loser'
@@ -61,13 +63,10 @@ const Result = (props) => {
       opponentTextClassName += ' winner'
    }
 
-
-
    return (
 
       <div className = 'result'> 
          <h1 className = 'win-status'><span className = {winStatusTextClassName}>{winStatusText}</span></h1>
-         {/* winner will be blue, loser red, class set dynamically    */}
          <div className = 'result-icons-div'>
             <i className = {userIconClassName}></i>
             <i className = {opponentIconClassName}></i>
