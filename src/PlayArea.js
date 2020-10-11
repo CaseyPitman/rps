@@ -27,6 +27,10 @@ const PlayArea = () => {
       setStage('countdown');
    }
 
+   let endCountdown = () => {
+      setStage('result');
+   }
+
 
    let show;
    if (stage === 'choose'){
@@ -35,7 +39,8 @@ const PlayArea = () => {
                   select = {userSelects}/>
    } else if (stage === 'countdown'){
       show =   <Countdown
-                  stage = {stage} />
+                  stage = {stage}
+                  endCountdown = {endCountdown} />
    } else if (stage === 'result'){
       show =   <Result 
                   stage = {stage} />

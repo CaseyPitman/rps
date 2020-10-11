@@ -1,36 +1,34 @@
 // This module renders and updates a countdown for the gameplay - Three, two, one, shoot!
 
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState}from 'react';
+import TimerElements from './TimerElements';
+
 
 const Countdown = (props) => {
    
 
-   const [countdownText, setCountdownText] = useState('Ready?')
 
-   const countdownElements = ['Three...', 'Two...', 'One...', 'Shoot!'];
-
+   const [timer, setTimer] = useState(0);
 
 
-   let i = 0;
-   let countdownTimer = setInterval (() => {
-      if(i<4){
 
-         //This keeps rerendering infitiely. Each rerender runs it again?
-         // setCountdownText(countdownElements[i])
-         console.log(countdownText)
+      useEffect (() => {
+         const countdown = setInterval(() =>{
+            if (timer < 5){
+               setTimer(timer => timer+1); 
+            }
       
-         i++;
-      } else {
-         clearInterval(countdownTimer);
-         console.log('end')
-         //then call to playArea to advance to results.
-        }
-      }, 1000)
-
+         }, 1000)
+         
+         return () => {clearInterval(countdown);}
+      }, []);
+     
 
    return (
       <div className = "countdown" >
-         <h1 className = "countdown-text">test</h1>
+         <TimerElements 
+         countdownTimer = {timer}
+         endCountdown = {props.endCountdown}/>
       </div>
    )
 }
