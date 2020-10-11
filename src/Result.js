@@ -9,6 +9,16 @@ const Result = (props) => {
    let clickHandler = () => {
       props.reset();
    }
+
+
+
+
+   let userIconClassName = `fas fa-hand-${props.userChoice}`;
+   let userTextClassName = '';
+   let opponentIconClassName = `fas fa-hand-${props.opponentChoice}`;
+   let opponentTextClassName = '';
+   //if user wins add class name 'winner' to it's classname
+
    
    return (
 
@@ -16,14 +26,14 @@ const Result = (props) => {
          <h1 className = 'win-status'>You win!</h1>
          {/* winner will be blue, loser red, class set dynamically    */}
          <div className = 'result-icons-div'>
-            <i className ="fas fa-hand-rock winner"></i>
-            <i className ="fas fa-hand-scissors loser"></i>
+            <i className = {userIconClassName}></i>
+            <i className = {opponentIconClassName}></i>
          </div>
 
          <h2 className = 'win-explain'>
-            You chose <span className = 'player-status winner'>rock</span>.
+            You chose <span className = {userTextClassName}>{props.userChoice}</span>.
             <br/>
-            Your opponent chose <span className = 'opponent-status loser'>scissors</span>.
+            Your opponent chose <span className = {opponentTextClassName}>{props.opponentChoice}</span>.
             <br/> 
             Rock smashes scissors.</h2>
        

@@ -1,13 +1,14 @@
 // This module renders the main gameplay area
 
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 // Components
 import Selection from './Selection';
 import Result from './Result';
 
 //Functions
-import opponentChooses from './opponentChooses' 
+import opponentChooses from './opponentChooses';
+import findWinner from './findWinner';
 
 
 const PlayArea = () => {
@@ -16,7 +17,7 @@ const PlayArea = () => {
    const [stage, setStage] = useState('choose'); //choose, countdown, result
    const [userChoice, setUserChoice] = useState('');
    const [opponentChoice, setOpponentChoice ] = useState('');
- 
+   const [winner, setWinner] = useState('') //user or opponent
  
    //Function to record user choice, find opponent choice, and advance to countdown stage
    
@@ -24,7 +25,11 @@ const PlayArea = () => {
       setOpponentChoice(opponentChooses())
       setUserChoice(choice);
       setStage('result');
+
+      setWinner(findWinner(userChoice, opponentChoice));
    }
+
+
 
    let reset = () => {
       setStage('choose');
@@ -37,7 +42,7 @@ const PlayArea = () => {
    if (stage === 'choose'){
       show =   <Selection stage = {stage} select = {userSelects}/>
    } else if (stage === 'result'){
-      show =   <Result stage = {stage} reset = {reset} />
+      show =   <Result stage = {stage} reset = {reset} userChoice = {userChoice} opponentChoice = {opponentChoice}/>
    }
    
 
