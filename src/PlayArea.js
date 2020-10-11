@@ -11,13 +11,14 @@ import opponentChooses from './opponentChooses';
 import findWinner from './findWinner';
 
 
+
 const PlayArea = () => {
 
    //State hooks
    const [stage, setStage] = useState('choose'); //choose, countdown, result
    const [userChoice, setUserChoice] = useState('');
    const [opponentChoice, setOpponentChoice ] = useState('');
-   const [winner, setWinner] = useState('') //user or opponent
+
  
    //Function to record user choice, find opponent choice, and advance to countdown stage
    
@@ -26,7 +27,6 @@ const PlayArea = () => {
       setUserChoice(choice);
       setStage('result');
 
-      setWinner(findWinner(userChoice, opponentChoice));
    }
 
 

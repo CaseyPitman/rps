@@ -1,9 +1,21 @@
 // This module renders the results of the game
 
-import React from 'react';
+import React,  {useState, useEffect}from 'react';
+import winRationale from './winRationale';
+import findWinner from './findWinner'
 
 const Result = (props) => {
 
+   const [winRationaleText, setWinRationaleText] = useState('');
+   const [winner, setWinner] = useState('') //user or opponent or tie
+
+   //Retrieve rationale for win
+   useEffect(()=>{
+      //Determine Winner
+      setWinner(findWinner(props.userChoice, props.opponentChoice));
+      setWinRationaleText(winRationale([props.userChoice, props.opponentChoice]));
+   })
+  
 
    // Player clicks to play again
    let clickHandler = () => {
@@ -21,7 +33,7 @@ const Result = (props) => {
    let opponentTextClassName = '';
    //if user wins add class name 'winner' to its classname
 
-   let winRationale ='';
+
 
    
    return (
@@ -39,7 +51,7 @@ const Result = (props) => {
             <br/>
             Your opponent chose <span className = {opponentTextClassName}>{props.opponentChoice}</span>.
             <br/> 
-            Rock smashes scissors.</h2>
+            {winRationaleText}</h2>
        
          <h3 className = 'play-again' id = 'reset' onClick = {clickHandler}>Play Again</h3>   
       </div>
