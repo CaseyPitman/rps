@@ -35,7 +35,6 @@ const Result = (props) => {
 
 
 
-   
    return (
 
       <div className = 'result'> 

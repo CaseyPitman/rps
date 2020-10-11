@@ -1,10 +1,24 @@
 // This function determines the winner of the game.
 
-const findWinner = (userChoice, oppChoice) =>{
+const findWinner = (user, opp) =>{
 
-   console.log(`User chose ${userChoice} and opponent chose ${oppChoice}`);
+   let winner = 'result';
 
-   return 'user';
+   if (user === opp){
+      //it's a tie
+      winner = 'tie';
+   } else if (user === 'rock'){
+      //User chooses rock, wins v. scissors, loses v. paper
+      winner = (opp === 'scissors') ? 'user' : 'opponent';
+   } else if (user === 'paper'){
+      // User chooses paper, wins v. rock, loses v. paper
+      winner = (opp === 'rock') ? 'user' : 'opponent';
+   } else if (user === 'scissors'){
+      //User chooses scissors, wins v. paper, loses v. rock
+      winner = (opp === 'paper') ? 'user' : 'opponent';
+   }
+
+   return winner;
 
 }
 
