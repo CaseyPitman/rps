@@ -22,6 +22,8 @@ const Result = (props) => {
       props.reset();
    }
 
+
+
    //update based on context (or You Lose. or It's a tie)
    let winStatusText = 'You Win!'
    let winStatusTextClassName = 'loser' //or winner or Tie
@@ -32,6 +34,32 @@ const Result = (props) => {
    let opponentIconClassName = `fas fa-hand-${props.opponentChoice}`;
    let opponentTextClassName = '';
    //if user wins add class name 'winner' to its classname
+
+   if (winner === 'tie'){
+      //TIE
+      winStatusText = 'It\'s a tie.';
+      winStatusTextClassName = ' tie'
+      userIconClassName += ' tie';
+      opponentIconClassName += ' tie';
+      userTextClassName += ' tie';
+      opponentTextClassName += ' tie'
+   } else if (winner === 'user'){
+      // USER WINS
+      winStatusText = 'You win!';
+      winStatusTextClassName = ' winner'
+      userIconClassName += ' winner';
+      opponentIconClassName += ' loser';
+      userTextClassName += ' winner';
+      opponentTextClassName += ' loser'
+   }else if (winner === 'opponent'){
+      // USER LOSES
+      winStatusText = 'You lose.';
+      winStatusTextClassName = ' loser'
+      userIconClassName += ' loser';
+      opponentIconClassName += ' winner';
+      userTextClassName += ' loser';
+      opponentTextClassName += ' winner'
+   }
 
 
 
