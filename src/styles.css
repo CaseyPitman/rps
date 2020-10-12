@@ -25,11 +25,6 @@ body {
 
 #root {
    height:100%;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   align-content: center;
 }
 
 /* App */
@@ -39,7 +34,9 @@ body {
    align-items: center;
    flex-flow: row wrap;
 
-   height:65%;
+   margin: 50px auto 0;
+   height:75%;
+   max-height: 768px;
    max-width: 1024px;
    width:100%;
 }
@@ -164,25 +161,10 @@ body {
    cursor: pointer;
 }
 
-/* Win Percentage Tracker Component */
-
-.win-percentage-container {
-
-   text-align:center;
-   
-}
-
-.win-percentage-text {
-
-   font-size: 2.4rem;
-}
-
-
-
 /* Copyright Component */
 .copyright{
    position: absolute;
-   bottom: 20px;
+   bottom: 5px;
 
    text-align: center;
    width: 100%;
@@ -193,10 +175,6 @@ body {
 }
 
 
-/* MOBILE LANDSCAPE */
-
-
-
 /* TABLET */
 
 @media only screen and (min-width: 768px){
@@ -205,6 +183,7 @@ body {
    }
 
    .App {
+      margin: 100px auto 0; 
       width: 75%;
    }
 
@@ -212,6 +191,7 @@ body {
       width:75%;
    }
 }
+
 
 
 /* DESKTOP */
