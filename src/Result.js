@@ -7,16 +7,22 @@ import findWinner from './findWinner'
 const Result = (props) => {
 
    const [winRationaleText, setWinRationaleText] = useState('');
-   const [winner, setWinner] = useState('') //user or opponent or tie
+   const [winner, setWinner] = useState(''); //user or opponent or tie
+
+
+
 
    //Retrieve rationale for win
    useEffect(()=>{
       //Determine Winner
       setWinner(findWinner(props.userChoice, props.opponentChoice));
+
       //Determine rationale for win.
       setWinRationaleText(winRationale([props.userChoice, props.opponentChoice]));
-   })
 
+   }) 
+   
+   
    // Player clicks to play again
    let clickHandler = () => {
       props.reset();

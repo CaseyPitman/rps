@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 // Components
 import Selection from './Selection';
 import Result from './Result';
-import WinPercentageTracker from './WinPercentageTracker';
+
 
 //Functions
 import opponentChooses from './opponentChooses';
@@ -19,13 +19,14 @@ const PlayArea = () => {
    const [opponentChoice, setOpponentChoice ] = useState('');
 
  
+ 
    //Function to record user choice, find opponent choice, and advance to countdown stage
    let userSelects = (choice) => {
       setOpponentChoice(opponentChooses())
       setUserChoice(choice);
       setStage('result');
-
-   }
+   }  
+   
 
    let reset = () => {
       setStage('choose');
@@ -37,7 +38,7 @@ const PlayArea = () => {
    if (stage === 'choose'){
       show =   <Selection stage = {stage} select = {userSelects}/>
    } else if (stage === 'result'){
-      show =   <Result stage = {stage} reset = {reset} userChoice = {userChoice} opponentChoice = {opponentChoice}/>
+      show =   <Result stage = {stage} reset = {reset} userChoice = {userChoice} opponentChoice = {opponentChoice} />
    }
    
    // Components will render based on game state
@@ -46,10 +47,6 @@ const PlayArea = () => {
       <div className = 'play-area'>
 
          {show}
-         
-         <WinPercentageTracker />
-
-  
 
       </div>
    )
