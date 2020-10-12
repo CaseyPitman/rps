@@ -164,6 +164,19 @@ body {
    cursor: pointer;
 }
 
+/* Win Percentage Tracker Component */
+
+.win-percentage-container {
+
+   text-align:center;
+   
+}
+
+.win-percentage-text {
+
+   font-size: 2.4rem;
+}
+
 
 
 /* Copyright Component */

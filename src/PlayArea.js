@@ -5,6 +5,7 @@ import React, {useState} from 'react';
 // Components
 import Selection from './Selection';
 import Result from './Result';
+import WinPercentageTracker from './WinPercentageTracker';
 
 //Functions
 import opponentChooses from './opponentChooses';
@@ -45,6 +46,10 @@ const PlayArea = () => {
       <div className = 'play-area'>
 
          {show}
+         
+         <WinPercentageTracker />
+
+  
 
       </div>
    )

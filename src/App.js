@@ -12,6 +12,7 @@ import PlayArea from './PlayArea';
 import Copyright from './Copyright';
 
 
+
 function App() {
 
 
@@ -24,6 +25,8 @@ function App() {
       <PlayArea />
 
       <Copyright />
+
+     
       
     </div>
   );
